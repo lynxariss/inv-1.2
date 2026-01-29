@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Definición de Alcance – Proyecto X</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <div class="controls">
+    <button class="btn-icon" onclick="toggleTheme()" title="Cambiar tema">
+      <span id="theme-icon">🌙</span>
+    </button>
+    <button class="btn-icon" onclick="expandAll()" title="Expandir todo">
+      <span>📋</span>
+    </button>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>📦 Sistema de Gestión de Inventario</h1>
+      <p class="subtitle">Tienda X — Definición de Alcance del Proyecto</p>
+    </header>
+
+    <!-- Objetivo General -->
+    <div class="section-card">
+      <h2 onclick="toggleSection(this)">
+        <span>🎯</span> Objetivo General (SMART)
+      </h2>
+      <div class="content">
+        <p>Reducir el desfase de inventario del <span class="badge badge-danger">8% actual</span> a 
+        <span class="badge badge-success">≤ 2% anual</span></p>
+        
+        <div class="progress-item">
+          <div class="progress-header">
+            <span>Meta de Reducción</span>
+            <span id="progress-text">75% completado</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Objetivos Específicos -->
+    <div class="section-card">
+      <h2 onclick="toggleSection(this)">
+        <span>✅</span> Objetivos Específicos
+      </h2>
+      <div class="content">
+        <ul>
+          <li>
+            <strong>OE1:</strong> Tiempos de respuesta ≤ 1 segundo 
+            <span class="badge badge-info">avg_latency: 1s</span>
+            <span class="badge badge-warning">Fecha límite: 30/09/2025</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Alcance -->
+    <div class="section-card">
+      <h2 onclick="toggleSection(this)">
+        <span>📍</span> Alcance del Proyecto
+      </h2>
+      <div class="content">
+        <h3><span class="badge badge-success">In-Scope</span> Dentro del Alcance</h3>
+        <ul>
+          <li>✅ CRUD completo de productos</li>
+          <li>✅ Sistema de alertas de stock mínimo</li>
+        </ul>
+
+        <h3><span class="badge badge-danger">Out-of-Scope</span> Fuera del Alcance</h3>
+        <ul>
+          <li>❌ Facturación electrónica</li>
+          <li>❌ Aplicación móvil nativa</li>
+        </ul>
+
+        <h3><span class="badge badge-info">Criterios de Aceptación</span></h3>
+        <ul>
+          <li>CA1: Tiempo de respuesta ≤ 1 segundo</li>
+          <li>CA2: Disponibilidad del 99% en horario comercial</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Restricciones -->
+    <div class="section-card">
+      <h2 onclick="toggleSection(this)">
+        <span>⚠️</span> Restricciones y Parámetros
+      </h2>
+      <div class="content">
+        <div class="table-container">
+          <table id="restrictions-table">
+            <thead>
+              <tr>
+                <th>Parámetro</th>
+                <th>Valor / Especificación</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>💰 Presupuesto</strong></td>
+                <td>30,000 USD</td>
+                <td><span class="badge badge-warning">Definido</span></td>
+              </tr>
+              <tr>
+                <td><strong>⏱️ Duración</strong></td>
+                <td>6 meses</td>
+                <td><span class="badge badge-info">En curso</span></td>
+              </tr>
+              <tr>
+                <td><strong>🛠️ Stack Tecnológico</strong></td>
+                <td>PostgreSQL, Node.js, React</td>
+                <td><span class="badge badge-success">Aprobado</span></td>
+              </tr>
+              <tr>
+                <td><strong>⚖️ Normativas</strong></td>
+                <td>Protección de datos local</td>
+                <td><span class="badge badge-danger">Obligatorio</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
